@@ -1,0 +1,207 @@
+:root{
+    --dark-color: #19283f;
+    --secondary-color: #33d1cc;
+    --secondary-two-color: #ff3150;
+    --secondary-three-color: #ffc400;
+    --section-color:#eff7fa;
+}
+body{
+    font-family: "Roboto" , sans-serif;
+    scroll-behavior: smooth;
+}
+.btn-main{
+    color:var(--secondary-three-color) ;
+    background-color: var(--secondary-two-color);
+    padding: 0.5rem 1rem;
+}
+.btn-main:hover{
+    color: var(--secondary-three-color);
+    background-color: var(--secondary-two-color);
+}
+.main-title::after{
+    content: "";
+    position: absolute;
+    bottom: -30px ;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background-color: var(--secondary-three-color);
+
+}
+/* Start navbar */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link{
+    color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--secondary-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+.navbar .navbar-toggler{
+    color: white;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"]{
+    border-color: var(--seccond-color);
+}
+
+/* End navbar */
+/* Start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+
+/* End landing */
+/* Start Features */
+.features .icon-holder{
+    height: 200px;
+}
+.features .feat .number{
+    font-size: 180px;
+    color: var(--section-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.features .feat .icon{
+    font-size: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary-color);
+}
+.features .feat h4{
+    color: var(--secondary-three-color);
+}
+/* End Features */
+/* Start Our Work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem; 
+    cursor: pointer;
+    user-select: none;
+}
+.our-work ul li:not(:last-of-type){
+    margin-left: 10px;
+}
+.our-work ul li.active{
+    background-color: var(--secondary-two-color);
+    color: var(--secondary-three-color);
+    border-radius: 20px;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--secondary-two-color);
+}
+.our-work .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:calc(100% - 10px);
+    width:0;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #33d1ccbb;
+    transition: 0.3s;
+    
+}
+.our-work .box:hover::after{
+    content: attr(data-work);
+    width:calc(100% - 10px) ;
+    color: white;
+    left: 5px;
+}
+/* End Our Work */
+/* Start Stuff */
+.stuff .discription{
+    max-width: 500px;
+    margin: 20px auto;
+}
+/* End Stuff */
+/* Start Our Team */ 
+.our-team{
+    background-color: var(--section-color);
+}
+.our-team h3{
+    color: var(--secondary-three-color);
+}
+.our-team .box h4{
+    background-color: var(--secondary-color);
+}
+/* End Our Team */
+/* Start Project */
+.project{
+    background-color: var(--dark-color);
+}
+/* End Project */
+/* Start Subscribe */
+.subscribe{
+    background-color: var(--secondary-three-color);
+}
+.subscribe .input{
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+
+}
+.subscribe input:focus{
+    outline: none;
+}
+.subscribe ::placeholder{
+    color: white;
+}
+.subscribe input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--secondary-three-color);
+}
+/* End Subscribe */
+/* Start Footer */
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .copyright > span{
+    color: var(--secondary-color);
+}
+.footer .copyright p span{
+    color: var(--secondary-three-color);
+}
+.footer .contact ul svg{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    
+}
+.footer .contact .facebook{
+    background-color: #1877f2;
+}
+.footer .contact .youtube{
+    background-color: #ff0000;
+}
+.footer .contact .linkedin{
+    background-color: #0a66c2;
+}
+.footer .contact .twitter{
+    background-color: #14171a;
+}
+/* End Footer */
